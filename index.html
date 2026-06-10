@@ -56,48 +56,8 @@
       <h2 class="section-title">Upcoming Events</h2>
       <p class="section-sub">Join us for meetings, star parties, and virtual observing sessions. <a href="schedule.html">See the full 2026 schedule →</a></p>
 
-      <div class="card-grid">
-
-        <div class="card">
-          <p class="card-eyebrow text-cyan">June 12 · Thursday</p>
-          <div class="mb-1"><span class="badge badge-virtual">Virtual</span></div>
-          <p class="card-title">Virtual Star Party</p>
-          <p class="card-body">Join fellow members online for a relaxed virtual observing session. Details sent via HVAAstronomy.groups.io and Facebook.</p>
-          <div class="card-footer">
-            <strong>9:00 PM PDT</strong> &nbsp;·&nbsp; Online via Zoom
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="card-eyebrow text-cyan">June 13 · Friday</p>
-          <div class="mb-1"><span class="badge badge-starparty">Star Party</span></div>
-          <p class="card-title">In-Person Star Party</p>
-          <p class="card-body">Weather permitting — come out to Adair County Park for a dark-sky observing night. Scopes welcome! Details via email and Facebook.</p>
-          <div class="card-footer">
-            <strong>9:00 PM PDT</strong> &nbsp;·&nbsp; <a href="hvaastronomy.com/mapadair.htm">Adair County Park</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="card-eyebrow text-gold">July 14 · Tuesday</p>
-          <div class="mb-1"><span class="badge badge-meeting">Club Meeting</span></div>
-          <p class="card-title">HVA Club Meeting — In Person!</p>
-          <p class="card-body">Monthly club meeting at Fire Station 5. Presentations, Q&amp;A, and telescope tune-ups. All are welcome — bring a friend!</p>
-          <div class="card-footer">
-            <strong>7:00 PM PDT</strong> &nbsp;·&nbsp; Scott Zimbrick Memorial Fire Station
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="card-eyebrow text-cyan">July 11 · Saturday</p>
-          <div class="mb-1"><span class="badge badge-starparty">Star Party</span></div>
-          <p class="card-title">In-Person Star Party</p>
-          <p class="card-body">Weather permitting dark-sky star party at Adair County Park. Check your email and the groups.io list for updates.</p>
-          <div class="card-footer">
-            <strong>9:00 PM PDT</strong> &nbsp;·&nbsp; <a href="hvaastronomy.com/mapadair.htm">Adair County Park</a>
-          </div>
-        </div>
-
+      <div class="card-grid" id="upcoming-events">
+        <!-- populated from data/schedule-data.js -->
       </div>
 
       <p class="mt-3 text-center text-muted" style="font-size:.9rem">
@@ -331,5 +291,7 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="data/schedule-data.js"></script>
+  <script src="js/home-events.js"></script>
 </body>
 </html>
