@@ -16,7 +16,7 @@ var SCHEDULE_DATA = {
           "details": "See details in email from HVAAstronomy.groups.io",
           "location": "Scott Zimbrick Memorial Fire Station, Walnut Community Room",
           "address": "4950 NW Fair Oaks Dr, Corvallis, OR 97330",
-          "map": "../hvaastronomy.com/maphva.htm"
+          "map": "https://maps.google.com/?q=4950+NW+Fair+Oaks+Dr,+Corvallis,+OR+97330"
         },
         {
           "date": "12",
@@ -35,7 +35,7 @@ var SCHEDULE_DATA = {
           "details": "Star party at Adair County Park. See details in email from HVAAstronomy.groups.io",
           "location": "Adair County Park",
           "address": "",
-          "map": "../hvaastronomy.com/mapadair.htm"
+          "map": "https://maps.google.com/?q=Adair+County+Park,+Corvallis,+OR"
         }
       ]
     },
@@ -50,7 +50,7 @@ var SCHEDULE_DATA = {
           "details": "Star party at Adair County Park. See details in email from HVAAstronomy.groups.io",
           "location": "Adair County Park",
           "address": "",
-          "map": "../hvaastronomy.com/mapadair.htm"
+          "map": "https://maps.google.com/?q=Adair+County+Park,+Corvallis,+OR"
         },
         {
           "date": "14",
@@ -60,7 +60,7 @@ var SCHEDULE_DATA = {
           "details": "See details in email from HVAAstronomy.groups.io",
           "location": "Scott Zimbrick Memorial Fire Station, Walnut Community Room",
           "address": "4950 NW Fair Oaks Dr, Corvallis, OR 97330",
-          "map": "../hvaastronomy.com/maphva.htm"
+          "map": "https://maps.google.com/?q=4950+NW+Fair+Oaks+Dr,+Corvallis,+OR+97330"
         },
         {
           "date": "TBA",
