@@ -1,0 +1,10 @@
+# Old site files — kept locally for image references but not part of the new site
+hvaastronomy.com/
+
+# Windows metadata
+*Zone.Identifier
+
+# Editor / OS
+*.code-workspace
+.DS_Store
+Thumbs.db

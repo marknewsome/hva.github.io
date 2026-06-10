@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership — Heart of the Valley Astronomers</title>
+  <meta name="description" content="Join the Heart of the Valley Astronomers. Membership benefits, dues, and PayPal payment for HVAA members in Corvallis, Oregon.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-body">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/hva_logo_2026.png" alt="" class="nav-logo">
+        HVA Astronomers
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="links.html">Cool Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div style="background:linear-gradient(to bottom, var(--bg-alt), var(--bg)); padding: 3.5rem 1.5rem 2.5rem; border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-eyebrow">Join the Club</p>
+      <h1 class="section-title" style="font-size:2.2rem;">Membership</h1>
+      <p style="color:var(--muted);max-width:600px;margin-top:.5rem;">
+        If you support the mission and goals of the Heart of the Valley Astronomers,
+        we invite you to partner with us as a paid member. Membership is only $20 per year.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col" style="gap:4rem;">
+
+        <!-- LEFT: INFO -->
+        <div>
+          <h2 class="section-title">Why Join?</h2>
+          <p class="mt-2" style="color:var(--muted);">
+            Membership supports the club's outreach programs, equipment library, and activities.
+            All events are free and open to the public — membership is a way to give back and
+            get a little more involved.
+          </p>
+
+          <h3 class="mt-3 mb-2" style="color:var(--gold);font-size:1.1rem;">Member Benefits</h3>
+          <ul class="benefits-list">
+            <li>Vote in club elections and help shape the club's direction</li>
+            <li>Serve as an officer or director</li>
+            <li><a href="https://forms.gle/PKHJCoNEbWoBYEzb7" target="_blank" rel="noopener">Borrow club resources and equipment</a> — including telescopes and accessories</li>
+            <li>Support local astronomy outreach to schools and the community</li>
+          </ul>
+
+          <div class="info-box">
+            <strong>Dues are prorated by quarter.</strong> If you join mid-year, you only pay for the remaining quarters of the year.
+          </div>
+
+          <h3 class="mt-3 mb-2" style="color:var(--gold);font-size:1.1rem;">Community &amp; Communication</h3>
+          <p style="color:var(--muted);font-size:.95rem;">
+            Members are strongly encouraged to create a free account at
+            <a href="https://hvaastronomy.groups.io" target="_blank" rel="noopener">HVAAstronomy.groups.io</a>.
+            All important announcements, event details, weather updates, and club news
+            are posted to this group.
+          </p>
+
+          <div class="mt-3" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;">
+            <h4 class="text-gold mb-2">Have Questions?</h4>
+            <p style="color:var(--muted);font-size:.9rem;">
+              Email us at <a href="mailto:hvabod@groups.io">hvabod@groups.io</a>
+              and we'll be happy to answer any questions about membership or club activities.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: PAYMENT -->
+        <div>
+          <h2 class="section-title">Pay Dues</h2>
+          <p class="mt-2 mb-3" style="color:var(--muted);font-size:.95rem;">
+            Select your membership option below and pay securely via PayPal.
+          </p>
+
+          <div class="dues-card">
+            <div class="dues-card-header">
+              <h3>Annual Membership Dues</h3>
+              <p>Prorated for new members joining mid-year</p>
+            </div>
+            <div class="dues-card-body">
+
+              <div id="smart-button-container">
+                <div style="margin-bottom:1rem;">
+                  <label for="item-options" style="display:block;font-size:.85rem;color:var(--muted);margin-bottom:.4rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Select Membership Option</label>
+                  <select id="item-options" style="width:100%;background:var(--bg-alt);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:.6rem .75rem;font-size:.95rem;">
+                    <option value="Full-Year Membership" price="20">Full-Year Membership — $20</option>
+                    <option value="New Member (Apr-Dec)" price="15">New Member (Apr–Dec) — $15</option>
+                    <option value="New Member (Jul-Dec)" price="10">New Member (Jul–Dec) — $10</option>
+                    <option value="New Member (Oct-Dec)" price="5">New Member (Oct–Dec) — $5</option>
+                  </select>
+                  <select style="visibility:hidden;position:absolute;" id="quantitySelect"></select>
+                </div>
+
+                <div class="info-box" style="margin-bottom:1rem;font-size:.82rem;">
+                  <strong>Note:</strong> If your preferred name and email are not on your PayPal account,
+                  please add a note with your payment so we know who it's from.
+                </div>
+
+                <div id="paypal-button-container"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="mt-3" style="font-size:.82rem;color:var(--muted);text-align:center;">
+            Prefer to pay another way? Email <a href="mailto:hvabod@groups.io">hvabod@groups.io</a> for alternatives.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUTREACH TEASER ===== -->
+  <section class="section section-alt">
+    <div class="container" style="max-width:720px;">
+      <p class="section-eyebrow">Community Impact</p>
+      <h2 class="section-title">Outreach</h2>
+      <p class="mt-2">
+        One of the most rewarding parts of the club is sharing the night sky with young people.
+        We've delivered classroom presentations and outdoor viewing sessions for fourth-graders
+        at Adams and Hoover Elementary Schools, among others.
+      </p>
+      <p class="mt-2">
+        Kids have an inborn enthusiasm that gives a refreshing new perspective to everything
+        above us. Their fundamental questions — "Why does light travel so fast?" — push us to
+        think more deeply about the universe ourselves.
+      </p>
+      <p class="mt-2">
+        Membership dues help fund equipment and materials for these outreach programs.
+        Interested in volunteering for an outreach event?
+        <a href="mailto:hvabod@groups.io">Get in touch.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-name">Heart of the Valley Astronomers</div>
+          <div class="footer-tagline">Amateur astronomy in Corvallis, Oregon · Central Willamette Valley</div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="links.html">Cool Links</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Heart of the Valley Astronomers · Last updated June 2026</span>
+        <span class="footer-contact"><a href="mailto:hvabod@groups.io">hvabod@groups.io</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=ATvqvCgUW_W4YF4w-PLnmhA9rhnyZNCz4nsztpxr6EwXmFBawtlbYkIq-PTvvaL5eVJUZKUQLlimjs6Z&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      var shipping = 0;
+      var itemOptions = document.querySelector('#smart-button-container #item-options');
+      var quantity = 1;
+      var quantitySelect = document.querySelector('#smart-button-container #quantitySelect');
+
+      paypal.Buttons({
+        style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'paypal' },
+        createOrder: function(data, actions) {
+          var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+          var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute('price'));
+          if (quantitySelect.options.length > 0) {
+            quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+          } else {
+            quantity = 1;
+          }
+          var priceTotal = Math.round((quantity * selectedItemPrice + shipping) * 100) / 100;
+          return actions.order.create({
+            purchase_units: [{
+              description: 'HVAA Membership',
+              amount: {
+                currency_code: 'USD',
+                value: priceTotal,
+                breakdown: {
+                  item_total: { currency_code: 'USD', value: Math.round(selectedItemPrice * quantity * 100) / 100 },
+                  shipping: { currency_code: 'USD', value: shipping },
+                  tax_total: { currency_code: 'USD', value: 0 }
+                }
+              },
+              items: [{ name: selectedItemDescription, unit_amount: { currency_code: 'USD', value: selectedItemPrice }, quantity: quantity }]
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Thank you for your dues payment, ' + details.payer.name.given_name + '! Welcome to HVAA.');
+          });
+        },
+        onError: function(err) { console.error(err); }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

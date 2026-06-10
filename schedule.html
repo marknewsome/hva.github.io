@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule — Heart of the Valley Astronomers</title>
+  <meta name="description" content="2026 schedule of club meetings, star parties, and virtual events for the Heart of the Valley Astronomers in Corvallis, Oregon.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-body">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/hva_logo_2026.png" alt="" class="nav-logo">
+        HVA Astronomers
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="links.html">Cool Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div style="background:linear-gradient(to bottom, var(--bg-alt), var(--bg)); padding: 3.5rem 1.5rem 2.5rem; border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-eyebrow">Events Calendar</p>
+      <h1 class="section-title" style="font-size:2.2rem;">2026 Schedule</h1>
+      <p style="color:var(--muted);max-width:600px;margin-top:.5rem;">
+        All events are subject to weather and other conditions. Watch your
+        <a href="https://hvaastronomy.groups.io" target="_blank" rel="noopener">HVAAstronomy groups.io</a>
+        email for confirmations and any updates.
+      </p>
+      <p class="mt-2" style="font-size:.9rem;color:var(--muted)">
+        Questions? Email <a href="mailto:hvabod@groups.io">hvabod@groups.io</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== LEGEND ===== -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-bottom:.5rem;">
+        <span style="font-size:.8rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em;">Event types:</span>
+        <span class="badge badge-meeting">Club Meeting</span>
+        <span class="badge badge-starparty">Star Party</span>
+        <span class="badge badge-virtual">Virtual</span>
+        <span class="badge badge-outreach">Outreach</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE (rendered from data/schedule.json) ===== -->
+  <section class="section">
+    <div class="container">
+      <div id="schedule-container">
+        <p style="color:var(--muted);padding:2rem 0;">Loading schedule…</p>
+      </div>
+
+      <div class="info-box mt-3">
+        <strong>Note:</strong> Club meetings are held on the <strong>second Tuesday of each month</strong>.
+        Star parties may change based on weather. Always check
+        <a href="https://hvaastronomy.groups.io" target="_blank" rel="noopener">HVAAstronomy.groups.io</a>
+        for the latest. <span id="schedule-updated" style="color:var(--muted);font-size:.85rem;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECURRING MEETING INFO ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Monthly Meetings</h2>
+          <p class="mt-2">
+            Club meetings are held on the <strong>second Tuesday of each month</strong>
+            at 7:00 PM PDT — either in person at Fire Station 5 or via Zoom.
+            Check your email for the format each month.
+          </p>
+          <p class="mt-2">
+            Meetings typically include: member presentations, celestial highlights for the month,
+            telescope tune-ups, Q&amp;A, and club business.
+          </p>
+          <p class="mt-2">
+            <strong>All are welcome — free and open to the public.</strong> Bring questions, binoculars, or just curiosity.
+          </p>
+        </div>
+        <div>
+          <h2 class="section-title">Star Parties</h2>
+          <p class="mt-2">
+            We regularly hold in-person observing nights at <strong>Adair County Park</strong>,
+            which offers excellent dark skies within a short drive of Corvallis.
+          </p>
+          <p class="mt-2">
+            We also host <strong>virtual star parties</strong> on Zoom — great for cloudy nights
+            or when you can't make it out. Members share live telescope feeds, discuss targets,
+            and enjoy the community atmosphere.
+          </p>
+          <p class="mt-2">
+            <a href="hvaastronomy.com/mapadair.htm">Get directions to Adair County Park →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-name">Heart of the Valley Astronomers</div>
+          <div class="footer-tagline">Amateur astronomy in Corvallis, Oregon · Central Willamette Valley</div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="links.html">Cool Links</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Heart of the Valley Astronomers · Last updated June 2026</span>
+        <span class="footer-contact"><a href="mailto:hvabod@groups.io">hvabod@groups.io</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/schedule.js"></script>
+</body>
+</html>
