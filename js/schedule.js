@@ -21,7 +21,7 @@ function renderEvent(ev) {
     ? `<span>${ev.address}</span>`
     : '';
   return `
-    <tr>
+    <tr data-type="${ev.type}">
       <td class="sched-date-cell">${ev.date}</td>
       <td style="padding-top:1rem;">${badge(ev.type)}</td>
       <td>
@@ -77,6 +77,29 @@ function loadSchedule() {
   if (updated && SCHEDULE_DATA.updated) {
     updated.textContent = 'Last updated: ' + SCHEDULE_DATA.updated;
   }
+
+  initFilter();
+}
+
+function initFilter() {
+  const buttons = document.querySelectorAll('.badge-filter');
+  if (!buttons.length) return;
+
+  function applyFilter() {
+    const active = new Set(
+      [...buttons].filter(b => b.classList.contains('active')).map(b => b.dataset.filter)
+    );
+    document.querySelectorAll('#schedule-container tr[data-type]').forEach(row => {
+      row.style.display = active.has(row.dataset.type) ? '' : 'none';
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      applyFilter();
+    });
+  });
 }
 
 loadSchedule();

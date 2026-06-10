@@ -311,6 +311,19 @@ p + p { margin-top: 0.85rem; }
 .badge-virtual    { background: rgba(192,138,240,0.12); color: var(--purple); border: 1px solid rgba(192,138,240,0.3); }
 .badge-outreach   { background: rgba(96,208,144,0.12);  color: var(--green);  border: 1px solid rgba(96,208,144,0.3); }
 
+.badge-filter {
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity .15s, transform .1s;
+  user-select: none;
+}
+.badge-filter:hover  { opacity: .85; }
+.badge-filter.active { opacity: 1; }
+.badge-filter:not(.active) {
+  opacity: .35;
+  filter: grayscale(.6);
+}
+
 /* ===== CELESTIAL EVENTS TABLE ===== */
 .responsive-table { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--border); }
 .data-table {
