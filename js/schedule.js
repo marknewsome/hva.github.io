@@ -1,5 +1,5 @@
-// Loads data/schedule.json and renders the schedule table
-// To update events: edit data/schedule.json — no HTML changes needed.
+// Schedule renderer — reads from data/schedule-data.js (SCHEDULE_DATA global)
+// To update events: edit data/schedule-data.js — no HTML changes needed.
 
 const TYPE_LABELS = {
   meeting:   { label: 'Club Meeting',  css: 'badge-meeting'   },
@@ -58,29 +58,24 @@ function renderMonth(month) {
     </div>`;
 }
 
-async function loadSchedule() {
+function loadSchedule() {
   const container = document.getElementById('schedule-container');
   if (!container) return;
 
-  try {
-    const res = await fetch('data/schedule.json');
-    if (!res.ok) throw new Error('fetch failed');
-    const data = await res.json();
-
-    const html = data.months.map(renderMonth).join('');
-    container.innerHTML = html;
-
-    const updated = document.getElementById('schedule-updated');
-    if (updated && data.updated) {
-      updated.textContent = 'Last updated: ' + data.updated;
-    }
-  } catch (err) {
+  if (typeof SCHEDULE_DATA === 'undefined') {
     container.innerHTML = `
       <div class="info-box" style="border-color:rgba(204,68,68,.4);background:rgba(204,68,68,.05);">
         <strong>Could not load schedule.</strong>
-        Check back soon or email
-        <a href="mailto:hvabod@groups.io">hvabod@groups.io</a> for the latest events.
+        Email <a href="mailto:hvabod@groups.io">hvabod@groups.io</a> for the latest events.
       </div>`;
+    return;
+  }
+
+  container.innerHTML = SCHEDULE_DATA.months.map(renderMonth).join('');
+
+  const updated = document.getElementById('schedule-updated');
+  if (updated && SCHEDULE_DATA.updated) {
+    updated.textContent = 'Last updated: ' + SCHEDULE_DATA.updated;
   }
 }
 

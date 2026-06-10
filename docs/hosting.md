@@ -35,7 +35,7 @@ To serve from `hvaastronomy.com`:
 A non-technical club member can update events without touching HTML:
 
 1. Go to https://github.com/hvaastronomy/hvaastronomy.github.io
-2. Click `data/schedule.json`
+2. Click `data/schedule-data.js`
 3. Click the pencil icon (Edit)
 4. Update the JSON — add/remove events or months following the existing pattern
 5. Click "Commit changes"
