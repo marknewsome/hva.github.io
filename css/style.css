@@ -742,3 +742,63 @@ footer {
 .mt-3 { margin-top: 1.5rem; }
 .text-center { text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ===== PAGE HEADER GRADIENTS ===== */
+.page-header {
+  background: linear-gradient(to bottom, var(--bg-alt), var(--bg));
+  padding: 3.5rem 1.5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.page-header--article {
+  background: linear-gradient(to bottom, var(--bg-alt), var(--bg));
+  padding: 3rem 1.5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== PAGE HEADER TYPOGRAPHY ===== */
+.page-header__sub {
+  color: var(--muted);
+  max-width: 600px;
+  margin-top: .5rem;
+}
+.page-header__eyebrow {
+  color: var(--muted);
+  margin-top: .5rem;
+}
+
+/* ===== HEADING SIZES ===== */
+.h1-lg  { font-size: 2.2rem; }
+.h1-xl  { font-size: 2.4rem; }
+
+/* ===== ARTICLE HEADER ===== */
+.article-header         { margin-bottom: 2rem; }
+.article-header__byline { color: var(--muted); margin-top: .5rem; }
+
+/* ===== CARD VARIANTS ===== */
+.card-inset {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem;
+}
+.card-inset--lg {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem;
+}
+
+/* ===== CARD INTERNALS ===== */
+.card-inset__title {
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+.card-inset__desc {
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+/* ===== LIST SPACING ===== */
+.list-spaced         { line-height: 2; }
+.list-spaced-ol      { line-height: 2.2; padding-left: 1.5rem; }
