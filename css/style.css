@@ -802,3 +802,29 @@ footer {
 /* ===== LIST SPACING ===== */
 .list-spaced         { line-height: 2; }
 .list-spaced-ol      { line-height: 2.2; padding-left: 1.5rem; }
+
+/* ===== WELCOME BANNER ===== */
+.welcome-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(90deg, rgba(240,192,64,0.12), rgba(72,217,232,0.10), rgba(240,192,64,0.12));
+  border-bottom: 1px solid rgba(240,192,64,0.25);
+  padding: .6rem 1.5rem;
+  font-size: .9rem;
+  color: var(--gold);
+  text-align: center;
+}
+.welcome-banner__close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 .25rem;
+  flex-shrink: 0;
+}
+.welcome-banner__close:hover { color: var(--text); }
+.welcome-banner.hidden { display: none; }

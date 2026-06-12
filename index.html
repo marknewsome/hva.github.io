@@ -30,6 +30,12 @@
     </div>
   </nav>
 
+  <!-- ===== WELCOME BANNER ===== -->
+  <div id="welcome-banner" class="welcome-banner">
+    <span>&#10024; Welcome to our new website!</span>
+    <button type="button" class="welcome-banner__close" id="welcome-close" aria-label="Dismiss">&times;</button>
+  </div>
+
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-content">
@@ -291,6 +297,18 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script>
+    (function () {
+      var banner = document.getElementById('welcome-banner');
+      if (localStorage.getItem('hva-welcome-dismissed')) {
+        banner.classList.add('hidden');
+      }
+      document.getElementById('welcome-close').addEventListener('click', function () {
+        banner.classList.add('hidden');
+        localStorage.setItem('hva-welcome-dismissed', '1');
+      });
+    })();
+  </script>
   <script src="data/schedule-data.js"></script>
   <script src="js/home-events.js"></script>
 </body>
