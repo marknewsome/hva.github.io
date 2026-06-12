@@ -1,5 +1,16 @@
 // Schedule renderer — reads from data/schedule-data.js (SCHEDULE_DATA global)
 // To update events: edit data/schedule-data.js — no HTML changes needed.
+// Links in details text: [label](https://url) or bare https://url are auto-linked.
+
+function linkify(text) {
+  // [label](url) → <a href="url">label</a>
+  text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // bare https://... → <a href="...">...</a>
+  text = text.replace(/(?<!href=")(https?:\/\/[^\s<"]+)/g,
+    '<a href="$1" target="_blank" rel="noopener">$1</a>');
+  return text;
+}
 
 const TYPE_LABELS = {
   meeting:   { label: 'Club Meeting',  css: 'badge-meeting'   },
@@ -27,7 +38,7 @@ function renderEvent(ev) {
       <td>
         <p class="sched-time">${ev.time}</p>
         <p class="sched-event">${ev.title}</p>
-        <p class="sched-info">${ev.details}</p>
+        <p class="sched-info">${linkify(ev.details)}</p>
       </td>
       <td>
         <div class="sched-loc">

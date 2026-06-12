@@ -1,6 +1,14 @@
 // Renders the first 4 upcoming events on the home page from SCHEDULE_DATA.
 // To update: edit data/schedule-data.js
 
+function linkify(text) {
+  text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  text = text.replace(/(?<!href=")(https?:\/\/[^\s<"]+)/g,
+    '<a href="$1" target="_blank" rel="noopener">$1</a>');
+  return text;
+}
+
 const HOME_TYPE_COLORS = {
   meeting:   'text-gold',
   starparty: 'text-cyan',
@@ -38,7 +46,7 @@ function renderHomeCard(ev, monthName) {
       <p class="card-eyebrow ${color}">${eyebrow}</p>
       <div class="mb-1"><span class="badge ${badge}">${label}</span></div>
       <p class="card-title">${ev.title}</p>
-      <p class="card-body">${ev.details}</p>
+      <p class="card-body">${linkify(ev.details)}</p>
       <div class="card-footer">
         <strong>${ev.time}</strong> &nbsp;&middot;&nbsp; ${locationLine}
       </div>
